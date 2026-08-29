@@ -56,7 +56,7 @@
 
 ## 📑 Cấu Trúc Báo Cáo Nộp Bài (4 Artefacts / 4-Page Report)
 
-File báo cáo chính thức: [Day27_AI-Team-Lab_TeamXX.pdf](./Day27_AI-Team-Lab_TeamXX.pdf)
+File báo cáo chính thức: [Day27_VGO_VPay.pdf](./Day27_VGO_VPay.pdf)
 
 Báo cáo gồm 4 trang tiêu chuẩn tương ứng với 4 Artefact:
 1. **Trang 1 (Artefact 1) — Stakeholder Map & 4 Chiến Lược Tương Tác:**
@@ -91,4 +91,4 @@ Báo cáo gồm 4 trang tiêu chuẩn tương ứng với 4 Artefact:
 - [x] **GATE 2 — Pitch & RACI:** Pitch Conclusion First dựa trên 2 báo cáo eval thật, có phản biện + 3 hành động giảm rủi ro, RACI 6 việc mỗi việc đúng 1 Accountable → [PHASE_2_PITCH_RACI.md](./PHASE_2_PITCH_RACI.md).
 - [x] **GATE 3 — AI Team Design:** Chốt mô hình Embedded (sửa lại từ Hybrid), 6 Core Role gắn người thật, 3 capability gap dùng đủ Partner/Outsource/Hire → [PHASE_3_AI_TEAM_DESIGN.md](./PHASE_3_AI_TEAM_DESIGN.md).
 - [x] **GATE 4 — Team Health & Growth:** Chấm đủ 4 trục (thấp nhất: Tốc độ ra sản phẩm 2.5/5), chốt 1 nút thắt chặn milestone, nâng competency Evals của AI Engineer lên L3, 3 hành động 30 ngày có Owner + Deadline + dấu hiệu hoàn thành → [PHASE_4_TEAM_HEALTH_GROWTH.md](./PHASE_4_TEAM_HEALTH_GROWTH.md).
-- [ ] **GATE 5 — Nộp bài:** File PDF $\le$ 4 trang và repo public.
+- [x] **GATE 5 — Nộp bài:** Rà chéo 8 hạng mục số liệu dùng ở nhiều file, sửa 4 mâu thuẫn giữa bản nháp sớm và kết quả cuối, PDF đúng 4 trang A4 → [PHASE_5_SELF_CHECK.md](./PHASE_5_SELF_CHECK.md). ⏳ Việc cuối: trưởng nhóm commit, push và đặt repository ở chế độ public.

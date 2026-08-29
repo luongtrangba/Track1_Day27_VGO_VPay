@@ -102,69 +102,25 @@ graph TB
 | **Backend API** | Python 3.13, FastAPI, Uvicorn, Pydantic, SQLAlchemy 2.0, Alembic | Xử lý giao dịch, xác thực JWT, RBAC phân quyền staff/user |
 | **Mobile Client** | Expo SDK 57, React Native, TypeScript | Ứng dụng ví cho người dùng cuối (chuyển tiền, chat AI, game FMV) |
 | **Web Admin & Landing** | React 18, Vite, TailwindCSS / Vanilla CSS | Bảng điều khiển giám sát rủi ro, traces log, quản trị kịch bản |
-| **DevOps & QA** | Docker, GitHub Actions, Terraform, Pytest (774+ tests), Evals (12 cases) | Tự động hóa CI/CD, kiểm thử độ chính xác của Agent |
+| **DevOps & QA** | Docker, GitHub Actions, Terraform, Pytest (1560 test thu thập được), 2 bộ eval đã chạy có báo cáo JSON | Tự động hóa CI/CD, kiểm thử độ chính xác của Agent |
 
 ---
 
-## 4. 🧭 Ánh Xạ Dự Án VPay Vào Bài Tập Day 27 (4 Artefacts Mapping)
+## 4. 🧭 Bốn Artefact Cuối Cùng (kết quả thật, không phải bản nháp)
 
-Dự án VPay là chất liệu hoàn hảo để giải quyết trọn vẹn 4 phần trong Lab Day 27:
+> ⚠️ **Mục này đã được viết lại ngày 30/08/2026.** Bản trước là phác thảo sớm và **mâu thuẫn với kết quả cuối**: từng ghi mô hình *Hybrid*, pitch hứa *"giảm 85% rủi ro"*, và stakeholder *Đội SRE / Ban điều hành Fintech / Đơn vị viễn thông* — cả ba đều không còn đúng sau khi team làm đủ 4 phase. Nội dung chuẩn nằm trong 4 file dưới đây; file này chỉ giữ vai trò bối cảnh dự án (mục 1–3).
 
-```
-                  ┌──────────────────────────────────────────────────┐
-                  │          DAY 27 — AI TEAM LAB WORKFLOW           │
-                  └─────────────────────────┬────────────────────────┘
-                                            │
-         ┌──────────────────────────────────┼──────────────────────────────────┐
-         ▼                                  ▼                                  ▼
-┌───────────────────┐              ┌───────────────────┐              ┌───────────────────┐
-│ Trang 1: ARTEFACT 1│              │ Trang 2: ARTEFACT 2│              │ Trang 3: ARTEFACT 3│
-│ Stakeholder Map   │              │ Pitch & RACI      │              │ AI Team Design    │
-│ & Engagement Plan │              │ Matrix            │              │ & Resourcing      │
-└────────┬──────────┘              └────────┬──────────┘              └────────┬──────────┘
-         │                                  │                                  │
-         │ • Champion: Đội An ninh & SRE    │ • Pitch: Conclusion First với    │ • Mô hình: Hybrid AI Team
-         │ • Blocker: Khách hàng ngại phiền │   dữ liệu chặn lừa đảo thực tế   │ • Core: Lead, AI Eng, SRE
-         │ • Supporter: Người tin cậy       │ • RACI: Phân định rõ 1 Account-  │ • Gap: Outsource Video FMV,
-         │ • Bystander: Cơ quan viễn thông  │   able cho AI Evals, Model Risk  │   Partner với Ngân hàng/SePay
-         └──────────────────────────────────┼──────────────────────────────────┘
-                                            │
-                                            ▼
-                                   ┌───────────────────┐
-                                   │ Trang 4: ARTEFACT 4│
-                                   │ Team Health &     │
-                                   │ 30-Day Growth Plan│
-                                   └───────────────────┘
-                                            │
-                                            │ • 4 Trụ cột Health (AI, Speed, Morale, Delivery)
-                                            │ • Kế hoạch 30 ngày: Lên L2/L3 Competency
-```
+| Trang | Artefact | File nguồn | Kết luận chốt |
+|:---:|:---|:---|:---|
+| 1 | Stakeholder Map & 4 chiến lược | [`PHASE_1_STAKEHOLDER_MAP.md`](./PHASE_1_STAKEHOLDER_MAP.md) | 11 stakeholder (Trang 8 + Bích 7, trùng 4). Đủ 4 góc phần tư. Chỉ **3/11 stance có căn cứ thật**, 8 còn lại là giả định kèm hạn kiểm chứng. Ưu tiên: Mentor · chuyên gia anti-phishing · **BP Compliance (chưa ủng hộ)** · nhóm 5 user thử |
+| 2 | Pitch Conclusion First & RACI | [`PHASE_2_PITCH_RACI.md`](./PHASE_2_PITCH_RACI.md) | Pitch nhắm BP An ninh & Compliance. Bằng chứng **chỉ dùng số đo thật**: 120 lượt đối kháng 0 rò rỉ · 90 ca recall@3 98.9% · 1560 test. Small ask: 45 phút ngày 04/09. RACI 6 việc, mỗi việc đúng 1 Accountable |
+| 3 | AI Team Architecture & Resourcing | [`PHASE_3_AI_TEAM_DESIGN.md`](./PHASE_3_AI_TEAM_DESIGN.md) | Mô hình **EMBEDDED** (không phải Hybrid). 6 Core Role gắn người thật — Bích quá tải 2 vai. 3 gap: tuân thủ PII → **Partner** · sản xuất FMV → **Outsource** · vận hành Evals → **Hire** |
+| 4 | Team Health & Growth Plan | [`PHASE_4_TEAM_HEALTH_GROWTH.md`](./PHASE_4_TEAM_HEALTH_GROWTH.md) | Thấp nhất: **Tốc độ ra sản phẩm 2.5/5**. Nút thắt: người viết agent tự chấm agent, eval chạy ngoài CI. Competency: AI Engineer gần L2 → nâng **Evals**. 3 hành động 30 ngày có Owner + Deadline + dấu hiệu |
 
-### 📋 Tóm tắt 4 Artefact chuẩn bị cho Báo cáo PDF 4 Trang:
-
-1. **Trang 1 — Stakeholder Map & Chiến Lược Tương Tác:**
-   - **Champion (Ủng hộ cao, Ảnh hưởng cao):** Ban điều hành Fintech, Trưởng bộ phận An ninh mạng $\rightarrow$ *Chiến lược: Báo cáo tỷ lệ cứu tiền thành công và số vụ gian lận ngăn chặn.*
-   - **Blocker (Ảnh hưởng cao, lo ngại phiền phức):** Khách hàng khó tính ghét bị chậm giao dịch $\rightarrow$ *Chiến lược: Giữ độ trễ Cổng kép $< 50ms$, chỉ mở chat khi rủi ro thật sự cao.*
-   - **Supporter (Quan tâm cao):** Người thân tin cậy (Trusted Contact), Chuyên gia phòng chống lừa đảo $\rightarrow$ *Chiến lược: Cung cấp tính năng nhận thông báo trực quan, đơn giản.*
-   - **Bystander (Theo dõi định kỳ):** Đơn vị hạ tầng viễn thông $\rightarrow$ *Chiến lược: Cập nhật định kỳ danh sách đầu số spam.*
-
-2. **Trang 2 — 60s Elevator Pitch (Conclusion First) & RACI:**
-   - **Pitch:** *"VPay giúp giảm 85% rủi ro mất tiền do lừa đảo thao túng tâm lý nhờ cơ chế Cổng kép kết hợp AI can thiệp thông minh — giúp người dùng tự bảo vệ tiền của mình mà không làm gián đoạn trải nghiệm giao dịch hàng ngày."*
-   - **RACI:** Phân định rõ Accountable (A) duy nhất: Lương Thanh Trang chịu trách nhiệm chất lượng sản phẩm & quy trình can thiệp; Đào Ngọc Bích chịu trách nhiệm kỹ thuật mô hình rủi ro & eval benchmark.
-
-3. **Trang 3 — AI Team Architecture & Priority Resourcing:**
-   - **Mô hình tổ chức:** **Hybrid AI Team** (AI Engineer làm việc trực tiếp cùng Product & Backend).
-   - **Quyết định nguồn lực (Resourcing):**
-     - *In-house (Tự làm):* AI Agent LangGraph, Risk Engine, RAG Database.
-     - *Outsource (Thuê ngoài):* Đội ngũ quay dựng và sản xuất kịch bản video tương tác FMV.
-     - *Partner (Hợp tác):* Cổng thanh toán SePay & liên minh dữ liệu chống lừa đảo quốc gia.
-
-4. **Trang 4 — Team Health Check & 30-Day Growth Plan:**
-   - **Team Health:** Đo lường 4 trục (AI Output Reliability, Cycle Time, Team Burnout, Sprint Velocity).
-   - **Growth Plan 30 ngày:** Lộ trình nâng cấp năng lực từ L1 (Prompting cơ bản) lên L2/L3 (Agentic Evaluation, Fine-tuning Embedding, Automated Red-teaming).
+**Bản nộp gộp:** [`Day27_AI-Team-Lab_TeamXX.pdf`](./Day27_AI-Team-Lab_TeamXX.pdf) — 4 trang A4, mỗi trang một artefact.
 
 ---
 
 ## 5. 🎯 Kết Luận
 
-File tổng quan này là cơ sở vững chắc để Team tự tin trả lời mọi câu hỏi của Giảng viên/Mentor và hoàn thành xuất sắc 4 trang báo cáo trong **Day 27 — AI Team Lab**.
+Mục 1–3 của file này mô tả bối cảnh và kiến trúc dự án VPay. Toàn bộ kết luận của Lab Day 27 nằm ở 4 file artefact và bản PDF 4 trang liệt kê ở mục 4. Khi có mâu thuẫn giữa file này và 4 file artefact, **lấy 4 file artefact làm chuẩn**.
