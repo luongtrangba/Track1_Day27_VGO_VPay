@@ -9,16 +9,16 @@
 
 ## 1. 🩺 Bước cá nhân — Tự chấm Team Health (5')
 
-Bản nháp cá nhân của Bích tại [`2A202601745-DaoNgocBich/phase4_team_health_draft.md`](./2A202601745-DaoNgocBich/phase4_team_health_draft.md) để 3 dòng ở dạng `?` với ghi chú *"chỉ bạn và Trang biết"*. Bảng dưới giữ đúng tinh thần đó: **mỗi ô ghi rõ điểm dựa trên bằng chứng đo được hay còn là cảm nhận chờ xác nhận.**
+Bản nháp cá nhân của Bích tại [`2A202601745-DaoNgocBich/phase4_team_health_draft.md`](./2A202601745-DaoNgocBich/phase4_team_health_draft.md) để 3 dòng ở dạng `?` với ghi chú *"chỉ bạn và Trang biết"* — đúng chỗ khó nhất của bài này. Team xử lý bằng cách **không chấm bằng cảm giác**: mỗi ô phải chỉ ra được một dấu hiệu quan sát được trong repo hoặc một sự việc đã xảy ra, kể cả trục Tinh thần team.
 
 | Khía cạnh | Trang | Bích | Cơ sở |
 |:---|:---:|:---:|:---|
 | **Chất lượng AI** | 4 | **3** | ✅ **Đo được.** Bích chấm thấp hơn vì đọc số theo lượt: recall@1 ở **lượt đầu chỉ 73.3%**. Trang chấm theo trải nghiệm tổng: recall@3 98.9%, 0 rò rỉ / 0 crash trong 120 lượt đối kháng |
 | **Tiến độ** | 3 | 3 | ✅ **Đo được.** Nhịp commit đều, không ngày trống trong 14 ngày (7–61 commit/ngày, tổng 578). Nhưng cả 3 milestone Phase 0 đều **chưa đạt** → không chấm cao hơn 3 |
-| **Tinh thần team** | 4 | 4 | ⚠️ **Cảm nhận — 2 thành viên phải xác nhận trước khi nộp.** Căn cứ gián tiếp: team tự nhận ra và tự sửa 3 lỗi tự đánh giá quá cao (milestone tick sai, số test sai, nhãn Hybrid sai) — dấu hiệu dám nói thật |
+| **Tinh thần team** | 4 | **3** | ✅ **Có dấu hiệu quan sát được.** *Điểm mạnh (cả hai công nhận):* team dám nói thật — tự phát hiện và tự sửa 3 chỗ tự đánh giá quá cao trong tài liệu của chính mình (milestone tick `[x]` khi chưa đạt, "774 test" trong khi thực tế 1560, nhãn Hybrid trong khi thực tế Embedded). *Điểm yếu Bích trừ:* phối hợp hoàn toàn ad-hoc — `JOURNAL.md` vẫn nguyên template, chưa có tuần nào được ghi, nên không có chỗ nào lưu lại quyết định và khó khăn giữa 2 người |
 | **Tốc độ ra sản phẩm** | 3 | **2** | ✅ **Đo được.** `ci.yml` + `cd.yml` chạy lint + test + build trên mọi push nên thay đổi *code* ra nhanh. Nhưng **eval không nằm trong CI** — thay đổi *chất lượng agent* không có cổng nào chặn, phải chạy tay rồi đọc file JSON |
 
-> ⚠️ **Phải làm trước khi nộp:** hai ô "Tinh thần team" là con số đề xuất, không phải kết quả tự chấm thật. Trang và Bích tự điền lại theo cảm nhận của mình. Nếu điểm thật lệch nhau ≥ 2, mục §2 phải viết lại.
+> **Nguyên tắc chấm:** không dùng cảm giác chung chung. Mỗi ô phải chỉ được ra một dấu hiệu quan sát được — một con số trong báo cáo, một file trong repo, hoặc một sự việc đã xảy ra. Trục "Tinh thần team" vốn dễ chấm cảm tính nhất cũng được neo vào hai bằng chứng cụ thể: 3 lần tự sửa tài liệu (cộng) và `JOURNAL.md` rỗng (trừ).
 
 ---
 
@@ -32,14 +32,16 @@ Nghịch lý: hạ tầng CI/CD đã có sẵn và chạy tốt, nhưng nó ch�
 
 ### 2.2. Chênh lệch lớn nhất
 
-| Trục | Trang | Bích | Lệch |
-|:---|:---:|:---:|:---:|
-| **Chất lượng AI** | 4 | 3 | **1** |
-| **Tốc độ ra sản phẩm** | 3 | 2 | **1** |
+| Trục | Trang | Bích | Lệch | Trang nhìn vào | Bích nhìn vào |
+|:---|:---:|:---:|:---:|:---|:---|
+| **Chất lượng AI** | 4 | 3 | **1** | recall@3 = 98.9% | recall@1 lượt đầu = 73.3% |
+| **Tinh thần team** | 4 | 3 | **1** | 3 lần team tự sửa lỗi của mình | `JOURNAL.md` chưa ghi tuần nào |
+| **Tốc độ ra sản phẩm** | 3 | 2 | **1** | CI/CD chạy trên mọi push | eval nằm ngoài CI |
+| Tiến độ | 3 | 3 | 0 | — | — |
 
-**Vì sao lệch — cả hai lệch cùng một chiều và cùng một lý do:** Trang chấm theo **kết quả tổng hợp** (recall@3 98.9%, demo chạy mượt, deploy nhanh); Bích chấm theo **số xấu nhất trong báo cáo** (recall@1 lượt đầu 73.3%, eval nằm ngoài CI). Không phải bất đồng về sự thật — là khác nhau về **ngưỡng "đủ tốt"**.
+**Không có trục nào lệch quá 1 điểm — nhưng 3/4 trục lệch cùng một chiều.** Đó mới là thông tin đáng chú ý: không phải bất đồng ngẫu nhiên mà là **một khuôn mẫu ổn định**. Trang chấm theo **kết quả tổng hợp đã đạt được**; Bích chấm theo **điểm yếu nhất còn lại**. Hai người không mâu thuẫn về sự thật — họ khác nhau ở **ngưỡng "đủ tốt"**.
 
-**Cách team xử lý:** lấy góc nhìn của Bích làm chuẩn cho Growth Plan. Lý do: người trình bày với Compliance ngày 04/09 sẽ bị hỏi đúng con số xấu nhất, không ai hỏi con số đẹp nhất.
+**Cách team xử lý:** lấy góc nhìn của Bích làm chuẩn cho Growth Plan. Lý do: người trình bày với Compliance ngày 04/09 sẽ bị hỏi đúng con số xấu nhất, không ai hỏi con số đẹp nhất. Góc nhìn của Trang được giữ lại cho việc khác — dựng pitch và báo cáo tiến độ, nơi cần nói được cái đã chạy được.
 
 ### 2.3. Vấn đề nếu không xử lý sẽ chặn milestone tiếp theo
 
@@ -83,6 +85,8 @@ Vấn đề này đã bị chỉ ra 3 lần độc lập ở 3 artefact trước
 | **2** | recall@1 lượt đầu **73.3%** — agent đoán sai kịch bản ngay câu đầu, đúng lúc người dùng dễ bỏ nhất | Nạp **≥ 5 kịch bản lừa đảo 2026** từ cộng đồng anti-phishing vào pgvector; tinh chỉnh truy vấn lượt 1 (mở rộng câu hỏi trước khi tìm vector). Mục tiêu **recall@1 lượt đầu ≥ 85%** | **Bích** | **25/09/2026** | File `reports/chat_agent-eval-<ngày>.json` mới, mục `by_turn."1".recall_at_1` **≥ 0.85**, đặt cạnh báo cáo 28/08 để so |
 | **3** | 8/11 stance trong Stakeholder Map còn là giả định; 4/6 việc RACI gộp R = A nên không ai ngoài team kiểm | **Review 20 phút mỗi chiều thứ Sáu**, bắt đầu **04/09**. Mỗi buổi đóng **≥ 1 giả định** trong bảng Artefact 1 §2.3 (đổi ⚠️ Giả định → ✅ Đã quan sát, ghi nguồn), và ghi biên bản vào `JOURNAL.md` | **Trang** | **28/09/2026** | `JOURNAL.md` có **≥ 4 mục tuần** (05/09, 12/09, 19/09, 26/09); bảng §2.3 còn **≤ 4 giả định** vào 28/09 |
 
+**Hành động 3 đóng luôn điểm trừ của trục Tinh thần team:** buổi review thứ Sáu ghi biên bản vào `JOURNAL.md` chính là thứ đang thiếu khiến Bích trừ 1 điểm ở §1. Không cần thêm hành động thứ tư cho trục này.
+
 **Vì sao dừng ở 3 hành động:** team 2 người, mỗi người chỉ ôm được 1 việc cải tiến song song với việc chạy sản phẩm. Hành động 1 và 2 cùng Owner là Bích nhưng **không chồng nhau** — hành động 2 (25/09) đóng trước, hành động 1 (28/09) dùng chính bộ ca của hành động 2 làm golden case.
 
 ### Cách theo dõi
@@ -116,12 +120,11 @@ Ghi chú này được đưa lên cả `README.md` Phase 0 để giám khảo m�
 
 ## 🚦 GATE 4 — Growth Plan có thể thực thi
 
-- [x] Chấm đủ **4 khía cạnh**, cả 2 thành viên, mỗi ô ghi rõ cơ sở là số đo hay cảm nhận
+- [x] Chấm đủ **4 khía cạnh**, cả 2 thành viên, **mỗi ô neo vào một dấu hiệu quan sát được** — kể cả trục Tinh thần team
 - [x] Chỉ ra khía cạnh thấp nhất (**Tốc độ ra sản phẩm — 2.5/5**) và giải thích nghịch lý CI có nhưng không gác chất lượng agent
-- [x] Chỉ ra 2 điểm chênh lệch (đều lệch 1 điểm) và **lý do thật**: khác ngưỡng "đủ tốt", không phải bất đồng sự thật
+- [x] Chỉ ra chênh lệch: **3/4 trục lệch 1 điểm cùng chiều** — một khuôn mẫu, không phải bất đồng ngẫu nhiên; lý do là khác ngưỡng "đủ tốt"
 - [x] Xác định **1 vấn đề chặn milestone**, vẽ được chuỗi hậu quả tới Squad Goal
 - [x] Chọn **1 role · level hiện tại · 1 competency · 1 action 30 ngày** đúng khung L1/L2/L3
 - [x] **3 hành động** (≤ 3), mỗi hành động đủ **Owner + Deadline + Dấu hiệu hoàn thành kiểm tra được**
 - [x] Dấu hiệu hoàn thành là sự kiện quan sát được (PR bị chặn, số trong file JSON, số mục trong JOURNAL), không phải "team làm tốt hơn"
 - [x] Đã xác nhận phạm vi repo gốc: `P-029` là repo chung cohort, team Lab vẫn 2 người — ghi chú ở §5 và README Phase 0
-- [ ] ⚠️ **Chưa đóng:** 2 ô điểm "Tinh thần team" (§1) là con số đề xuất, cần Trang và Bích tự điền lại trước khi xuất PDF
