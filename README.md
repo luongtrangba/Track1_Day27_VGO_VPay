@@ -19,6 +19,8 @@
 > ⚠️ **Quy mô team — 2 người, đã báo giảng viên.** Đề bài yêu cầu 3–5 thành viên. Team VGO chỉ có 2 người và đây là **team dự án cố định có thật**, không phải team lập riêng để làm Lab. Áp dụng đúng ngoại lệ đề bài cho phép: *"Nếu lớp đã có team dự án cố định khác quy mô này, giữ nguyên team hiện tại và báo giảng viên trước khi bắt đầu Lab."*
 > Hệ quả kéo theo đã được xử lý trong bài, không né tránh: RACI chỉ tách được R ≠ A ở 2/6 công việc — 4 việc còn lại gộp R = A và mỗi việc đều gắn 1 người ngoài team làm **C bắt buộc** để chặn tự làm–tự duyệt (xem [Artefact 2](./PHASE_2_PITCH_RACI.md) §4.2).
 
+> 📌 **Về repo gốc `P-029`:** đây là **repository dùng chung của cohort**, có commit từ nhiều tài khoản ngoài team Lab (6 tài khoản / 578 commit tính đến 29/08/2026). Team Lab Day 27 vẫn là 2 người như bảng trên; toàn bộ 4 artefact chỉ đánh giá phạm vi công việc của 2 thành viên này, không tính phần đóng góp của người ngoài team.
+
 **Thư mục làm việc cá nhân:** [`2A202601745-DaoNgocBich/`](./2A202601745-DaoNgocBich/) — bản nháp cá nhân bước "Cá nhân" của Bích ở Phase 0, 1, 4. Các bản nháp này được gộp vào artefact chung ở bước "Team", giữ nguyên file gốc để đối chiếu.
 
 ---
@@ -88,5 +90,5 @@ Báo cáo gồm 4 trang tiêu chuẩn tương ứng với 4 Artefact:
 - [x] **GATE 1 — Stakeholder Map:** Gộp 2 danh sách cá nhân (Trang 8 + Bích 7) → 11 stakeholder, đủ 4 góc phần tư, stance có ghi rõ cơ sở (3 đã quan sát / 8 giả định kèm kế hoạch kiểm chứng), 4 hành động ưu tiên kèm deadline → [PHASE_1_STAKEHOLDER_MAP.md](./PHASE_1_STAKEHOLDER_MAP.md).
 - [x] **GATE 2 — Pitch & RACI:** Pitch Conclusion First dựa trên 2 báo cáo eval thật, có phản biện + 3 hành động giảm rủi ro, RACI 6 việc mỗi việc đúng 1 Accountable → [PHASE_2_PITCH_RACI.md](./PHASE_2_PITCH_RACI.md).
 - [x] **GATE 3 — AI Team Design:** Chốt mô hình Embedded (sửa lại từ Hybrid), 6 Core Role gắn người thật, 3 capability gap dùng đủ Partner/Outsource/Hire → [PHASE_3_AI_TEAM_DESIGN.md](./PHASE_3_AI_TEAM_DESIGN.md).
-- [ ] **GATE 4 — Team Health & Growth:** Growth plan có Action + Owner + Deadline khả thi.
+- [x] **GATE 4 — Team Health & Growth:** Chấm đủ 4 trục (thấp nhất: Tốc độ ra sản phẩm 2.5/5), chốt 1 nút thắt chặn milestone, nâng competency Evals của AI Engineer lên L3, 3 hành động 30 ngày có Owner + Deadline + dấu hiệu hoàn thành → [PHASE_4_TEAM_HEALTH_GROWTH.md](./PHASE_4_TEAM_HEALTH_GROWTH.md). ⚠️ Còn 1 mục chờ: 2 ô điểm "Tinh thần team" cần 2 thành viên tự điền (§1).
 - [ ] **GATE 5 — Nộp bài:** File PDF $\le$ 4 trang và repo public.
