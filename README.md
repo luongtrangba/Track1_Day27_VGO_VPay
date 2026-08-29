@@ -67,7 +67,7 @@ Báo cáo gồm 4 trang tiêu chuẩn tương ứng với 4 Artefact:
 ## 🚦 Gate Check Status
 
 - [x] **GATE 0 — Scope đã rõ:** Đã chốt thành viên (Lương Thanh Trang, Đào Ngọc Bích), dự án VPay (`P-029`), vai trò và repository nộp bài.
-- [ ] **GATE 1 — Stakeholder Map:** Stakeholder đa dạng, đủ 4 góc phần tư, phân tích stance rõ ràng.
+- [x] **GATE 1 — Stakeholder Map:** 11 stakeholder cụ thể, đủ 4 góc phần tư, có stance thực tế và 4 hành động ưu tiên kèm deadline → [PHASE_1_STAKEHOLDER_MAP.md](./PHASE_1_STAKEHOLDER_MAP.md).
 - [ ] **GATE 2 — Pitch & RACI:** Pitch Conclusion First có bằng chứng, RACI có duy nhất 1 Accountable/nhiệm vụ.
 - [ ] **GATE 3 — AI Team Design:** Cấu trúc team phù hợp quy mô, giải thích rõ Hire/Outsource/Partner.
 - [ ] **GATE 4 — Team Health & Growth:** Growth plan có Action + Owner + Deadline khả thi.
